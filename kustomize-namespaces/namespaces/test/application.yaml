@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/cheplorna/argotest-repo.git 
     targetRevision: HEAD
-    path: test
+    path: kustomize-namespaces/namespaces/test
   destination:
     server: https://kubernetes.default.svc 
     namespace: test
