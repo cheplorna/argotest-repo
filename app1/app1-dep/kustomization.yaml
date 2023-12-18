@@ -5,6 +5,7 @@ namespace: app1
 
 bases:
 - ../base
+- deployment.yaml
 
 patches:
 - target:
