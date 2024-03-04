@@ -6,6 +6,7 @@ namespace: app1
 resources:
 - ../resources
 - deployment.yaml
+- application.yaml
 
 patches:
 - target:
@@ -24,10 +25,22 @@ patches:
       value: quota-app1
     - op: replace
       path: /spec/hard/limits.cpu
-      value: 1 
+      value: 600m
     - op: replace
-      path: /spec/hard/services
-      value: 10 
+      path: /spec/hard/limits.memory
+      value: 600Mi
+    - op: replace
+      path: /spec/hard/requests.cpu
+      value: 600m
+    - op: replace
+      path: /spec/hard/requests.memory
+      value: 600Mi 
+    - op: replace
+      path: /spec/hard/pods
+      value: 5
+    - op: replace
+      path: /metadata/namespace
+      value: app1
 - target:
     kind: LimitRange
     name: limit-range
@@ -35,3 +48,9 @@ patches:
     - op: replace
       path: /metadata/name
       value: limit-app1
+    - op: replace
+      path: /metadata/namespace
+      value: app1
+
+
+     
