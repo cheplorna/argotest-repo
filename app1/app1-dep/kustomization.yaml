@@ -25,10 +25,10 @@ patches:
       value: quota-app1
     - op: replace
       path: /spec/hard/limits.cpu
-      value: 600m
+      value: 700m
     - op: replace
       path: /spec/hard/limits.memory
-      value: 600Mi
+      value: 800Mi
     - op: replace
       path: /spec/hard/requests.cpu
       value: 600m
