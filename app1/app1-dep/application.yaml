@@ -13,3 +13,6 @@ spec:
   destination:
     server: https://kubernetes.default.svc 
     namespace: app1 
+  syncPolicy:
+    automated: {}
+      
