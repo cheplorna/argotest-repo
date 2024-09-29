@@ -1,0 +1,18 @@
+application.yaml
+#ApplicationName.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/cheplorna/argotest-repo.git 
+    targetRevision: master
+    path: app1/app1-dep
+  destination:
+    server: https://kubernetes.default.svc 
+    namespace: app1 
+  syncPolicy:
+    automated: {}
