@@ -6,7 +6,6 @@ namespace: app1
 resources:
 - ../resources
 - deployment.yaml
-- ns.yaml
 
 patches:
 - target:
