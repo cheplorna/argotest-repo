@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: application-initializer-devteam-a
+  namespace: argocd
+spec:
+  project: app1
+  source:
+    repoURL: https://github.com/cheplorna/argotest-repo.git
+    targetRevision: master
+    path: ./app1/app1-dep
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: app1
+  # Sync policy
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - Validate=false
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
+      - FailOnSharedResource=true
