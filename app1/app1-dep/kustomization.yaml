@@ -6,6 +6,9 @@ namespace: app1
 resources:
 - ../resources
 - deployment.yaml
+- application-initializer.yaml
+- argocd-project-app1.yaml
+- networkpolicy-deny-ingress.yaml
 
 patches:
 - target:
