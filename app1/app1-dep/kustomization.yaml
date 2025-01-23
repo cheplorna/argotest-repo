@@ -1,7 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: app1
+namespace: staging
 
 resources:
 - ../resources
@@ -17,14 +17,14 @@ patches:
   patch: |-
     - op: replace
       path: /metadata/name
-      value: app1
+      value: staging
 - target:
     kind: ResourceQuota
     name: resource-quota
   patch: |-
     - op: replace
       path: /metadata/name
-      value: quota-app1
+      value: quota-staging
     - op: replace
       path: /spec/hard/limits.cpu
       value: 700m
@@ -42,17 +42,17 @@ patches:
       value: 5
     - op: replace
       path: /metadata/namespace
-      value: app1
+      value: staging
 - target:
     kind: LimitRange
     name: limit-range
   patch: |-
     - op: replace
       path: /metadata/name
-      value: limit-app1
+      value: limit-staging
     - op: replace
       path: /metadata/namespace
-      value: app1
+      value: staging
 
 
      

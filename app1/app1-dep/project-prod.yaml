@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: project-prod
+  namespace: argocd
+spec:
+  description: prod project
+  source-repos:
+  - 'https://github.com/cheplorna/argotest-repo.git'
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  namespaceResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: prod
+    server: https://kubernetes.default.svc
+  orphanedResources:
+    warn: false
