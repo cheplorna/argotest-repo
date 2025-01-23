@@ -6,7 +6,8 @@ namespace: prod
 resources:
 - ../resources
 - deployment.yaml
-- argocd-project-app1.yaml
+- application-prod.yaml
+- project-prod.yaml
 - networkpolicy-deny-ingress.yaml
 
 patches:

@@ -13,8 +13,4 @@ spec:
     repoURL: https://github.com/cheplorna/argotest-repo.git
     targetRevision: master
   syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
-    automated:
-      selfHeal: true
-      prune: true
+  

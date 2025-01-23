@@ -6,7 +6,8 @@ namespace: staging
 resources:
 - ../resources
 - deployment.yaml
-- argocd-project-app1.yaml
+- application-staging.yaml
+- project-staging.yaml
 - networkpolicy-deny-ingress.yaml
 
 patches:
