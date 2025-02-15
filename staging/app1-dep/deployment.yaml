@@ -15,7 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx-app1
-        image: nginx-app-latest
-        repository: 357415106205.dkr.ecr.us-east-1.amazonaws.com/test
+        image: nginx:latest
         ports:
         - containerPort: 80
