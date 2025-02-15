@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: nginx-app1
   namespace: staging
+  annotations:
+     argocd-image-updater.argoproj.io/image-list: nginx=357415106205.dkr.ecr.us-east-1.amazonaws.com/test
+     argocd-image-updater.argoproj.io/nginx.update-strategy: latest
 spec:
   selector:
     matchLabels:
