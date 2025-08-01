@@ -1,6 +1,0 @@
-spec:
-source:
-  repoURL: https://github.com/cheplorna/argotest-repo.git
-destination:
-  server: https://kubernetes.default.svc
-  namespace: staging
