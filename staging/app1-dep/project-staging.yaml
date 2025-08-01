@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   description: staging project
-  source-repos:
+  sourceRepos:
     - https://github.com/cheplorna/argotest-repo.git
   clusterResourceWhitelist:
   - group: '*'
