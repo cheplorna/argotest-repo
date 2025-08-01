@@ -6,7 +6,7 @@ metadata:
 spec:
   description: staging project
   sourceRepos:
-    - 'https://github.com/cheplorna/argotest-repo.git'
+    - '*'
   clusterResourceWhitelist:
   - group: '*'
     kind: '*'
