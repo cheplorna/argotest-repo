@@ -7,7 +7,6 @@ spec:
   destination:
     namespace: staging
     server: https://kubernetes.default.svc
-  project: project-staging
   source:
     path: staging/app1-dep
     repoURL: https://github.com/cheplorna/argotest-repo.git
